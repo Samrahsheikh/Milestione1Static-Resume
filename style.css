@@ -1,0 +1,371 @@
+/* General Styling */
+body {
+  font-family: 'Montserrat', sans-serif; /* Modern, bold font */
+  background-color: #1a1a2e; /* Dark navy blue */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #453d87, #302b63, #24243e); /* Dark gradient with deep purple, blue, and black tones */
+  color: #d4d4dc; /* Light gray text for readability */
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.7); /* Stronger inset shadow for depth */
+  border: 5px solid #0f0c29; /* Dark border for a framed effect */
+}
+
+
+  
+  .resume {
+    background-color: #d3dfe9; /* Light background for contrast */
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(224, 8, 8, 0.658);
+    position: relative;
+    overflow: hidden;
+  }
+  
+/* Switch container styling */
+/* Switch Container Styling */
+.switch-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: #a27d7d;
+  z-index: 1000; /* To make sure it's on top of other elements */
+  transition: transform 0.4s ease-in-out, opacity 0.3s;
+  cursor: pointer;
+}
+
+/* Label Text Styling */
+.switch-container b {
+  margin-left: 10px;
+  color: #ff5733; /* Vibrant color for text */
+}
+
+/* The switch - the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The round slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(185, 29, 29);
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* When checked, change the background color */
+input:checked + .slider {
+  background-color: #4309d4b4;
+}
+
+/* Move the slider/round button when checked */
+input:checked + .slider:before {
+  transform: translateX(30px);
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(37, 134, 186, 0.8);
+}
+
+/* Animation for hover effect */
+.switch:hover .slider {
+  box-shadow: 0 0 20px rgba(185, 6, 6, 0.3);
+}
+
+/* Make the switch button bounce when toggled */
+.switch input:checked + .slider:before {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(15px); }
+  50% { transform: translateX(30px); }
+  75% { transform: translateX(25px); }
+  100% { transform: translateX(30px); }
+}
+
+/* Responsive Design */
+
+
+
+/* When the checkbox is checked, the background turns yellow */
+input:checked + .slider {
+  background-color: #f0c20a;
+}
+
+/* Move the slider when checked */
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Show/Hide label */
+.switch-container span {
+  margin-left: 15px;
+  font-size: 16px;
+  color: #410202;
+}
+
+
+
+  
+  h1, h2 {
+    color: #4444441e; /* Darker text */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    animation: fadeInTitle 1.5s ease-in-out;
+    color: #1345b1e9; /* A vibrant orange-red for the title */
+  }
+  
+  h2 {
+    color: #0056b3; /* Blue color for subheadings */
+  }
+  
+  p, li {
+    color: #000000;
+    animation: fadeInText 1.8s ease-in-out;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 4px solid #7433ff; /* Bright yellow border */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    box-shadow: 0 0 20px rgba(89, 14, 174, 0.856);
+    animation: pulse 2s infinite alternate;
+  }
+  
+  img.profile-pic:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px rgba(13, 58, 162, 0.8);
+  }
+  
+  .profile-pic-container {
+    text-align: center;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideInSection 1.2s ease-in-out;
+  }
+  
+  .section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #5012ac, #8e6e0e, #0056b3);
+    animation: lineGradient 3s linear infinite;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn-container {
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  /* Default for larger screens (desktops, laptops) */
+
+
+/* Responsive styling for tablets (768px and below) */
+@media (max-width: 768px) {
+  .switch-container {
+    top: 130px;
+    right: 0;
+    font-size: 14px;
+  }
+
+  .switch {
+    width: 50px;
+    height: 25px;
+  }
+
+  .slider:before {
+    height: 20px;
+    width: 15px;
+  }}
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .resume {
+      padding: 20px;
+    }
+  
+    img.profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    .switch-container {
+      display: flex;
+      align-items: right;
+      justify-content: right;
+      margin-bottom: 20px;
+    }
+    
+  }
+
+  
+  /* Animations */
+  
+  /* Slide-in animation for the whole resume */
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    
+  }
+  
+  /* Soft pulsing glow effect on the resume */
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(105, 51, 255, 0.7);
+    }
+  }
+  
+  /* Fade-in for title */
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade-in for text */
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pulsating effect for the profile picture */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(231, 185, 48, 0.6);
+    }
+    100% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 204, 51, 0.8);
+    }
+  }
+  
+  /* Slide-in effect for sections */
+  @keyframes slideInSection {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Gradient animation for section lines */
+  @keyframes lineGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
